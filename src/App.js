@@ -22,11 +22,9 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("here");
     fetch("https://localhost:44334/api/Event/GetAllEvents")
     .then(resp => resp.json())
-    .then(resp => {  
-      console.log(resp);    
+    .then(resp => {   
       setData(resp);
     })
   },[refresh])
